@@ -77,7 +77,6 @@ function Header(props: any) {
   }, [token]);
   const handleBlockUserEvent = () => {
     const blockUser = async () => {
-      const oneUser = await getOneUser(token);
       localStorage.removeItem("accessToken");
       navigate("/login");
     };

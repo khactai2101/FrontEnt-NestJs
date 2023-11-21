@@ -14,5 +14,4 @@ const CustomerLayout = () => {
     </div>
   );
 };
-
 export default CustomerLayout;
