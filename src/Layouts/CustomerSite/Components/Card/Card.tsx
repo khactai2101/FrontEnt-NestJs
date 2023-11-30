@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getAllProducts } from "../../../../API";
-import { IProduct } from "../../../../Types/type";
 import { Link } from "react-router-dom";
 
-const Card = (props: any) => {
+const Card = () => {
   const [products, setProducts] = useState<any>([]);
   const [loading, setLoading] = useState<any>(true);
   // const data = props.valueSearch.length === 0 ? products : props.valueSearch;
 
-  const token = localStorage.getItem("accessToken");
   useEffect(() => {
     //goi api dde thuc hien chuc nang hien thi tat ca cac san pham
     const data = async () => {
@@ -22,8 +20,6 @@ const Card = (props: any) => {
   const slip = products?.filter(
     (product: any) => product.category.category === "Son Môi"
   );
-
-  console.log(slip);
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-pink-200 to-pink-0 flex justify-center items-center py-20">

@@ -1,7 +1,5 @@
-import React from "react";
 import Header from "../../Components/Layouts/Header";
 import TableComments from "../../Components/Table/TableComments";
-import Pagination from "../../Components/pagination/Pagination";
 
 const ManagerComments = () => {
   return (

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   getOneUser,
   getAllCartByUser,
-  createOrder,
   deleteCartItemByUser,
 } from "../../../../API/user";
-import { IProduct } from "../../../../Types/type";
 
 import { message } from "antd";
 import { getAllAddress } from "../../../../API/address";
@@ -16,21 +14,11 @@ import PaypalButton from "../../../AdminSite/Components/PaypalButton";
 
 const Cart = () => {
   const token = localStorage.getItem("accessToken");
-  const [quantity, setQuantity] = useState<number>(1);
 
   const [address, setAddress] = useState<[]>([]);
   const [addressValue, setAddressValue] = useState<any>(0);
   const [paymentValue] = useState<any>(1);
 
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
   const [user, setUser] = useState<any>(null);
   const [cart, setCart] = useState<any>();
   const [paymentId, setPaymentId] = useState<number>(1);
@@ -87,7 +75,6 @@ const Cart = () => {
       message.warning("Vui lòng chọn địa chỉ");
       return;
     }
-    const orderItem = await createOrder(data, token);
 
     // Gửi emit khi đặt hàng thành công
     socket.emit("order", "order!");

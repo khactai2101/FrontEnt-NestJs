@@ -1,6 +1,4 @@
-import React from "react";
 import Header from "../../Components/Layouts/Header";
-import Pagination from "../../Components/pagination/Pagination";
 import TableBlogs from "../../Components/Table/TableBlogs";
 
 const ManagerBlogs = () => {

@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const ButtonGoogle = (props: Props) => {
+const ButtonGoogle = () => {
   const handleClick = () => {
     const width = window.screen.width / 2;
     const height = window.screen.height / 2;

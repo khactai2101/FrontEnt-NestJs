@@ -1,30 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../../../assets/images/logo-kyo.png";
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
-import { IUser } from "../../../../Types/type";
-import {
-  getAllCartByUser,
-  getAllUsers,
-  getOneUser,
-} from "../../../../API/user";
+import { getAllCartByUser, getOneUser } from "../../../../API/user";
 import { BsCartPlus } from "react-icons/Bs";
 import { NavLink } from "react-router-dom";
-import { jwtDecode } from "jwt-decode";
 import { Avatar, Dropdown } from "flowbite-react";
 import { getAllProducts } from "../../../../API";
 import * as io from "socket.io-client";
 const socket = io.connect("http://localhost:9000");
 
-function Header(props: any) {
+function Header() {
   const navigate = useNavigate();
   const token = localStorage.getItem("accessToken");
-  const [value, setValue] = useState<string>("");
   const [users, setUsers] = useState<any>([]);
   const [isCheck, setIsCheck] = useState(token);
   const [products, setProducts] = useState<any>([]);
-  const [loading, setLoading] = useState<any>(false);
-  const [valueSearch, setValueSearch] = useState<any>([]);
   const [cart, setCart] = useState<any>();
 
   // useEffect(() => {
@@ -317,6 +308,3 @@ function Header(props: any) {
 }
 
 export default Header;
-function useSelector(arg0: (state: any) => any) {
-  throw new Error("Function not implemented.");
-}

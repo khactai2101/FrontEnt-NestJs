@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "flowbite";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { SideBarItem } from "../../Utils/SidebarItem";
-import { getOneUser } from "../../../../API/user";
-import logo from "../../../../assets/images/logo-kyo.png";
 
 const Sidebar = () => {
   const getData = localStorage.getItem("accessToken");
-  const [users, setUsers] = useState<any>([]);
+
   const [isCheck, setIsCheck] = useState(getData);
 
-  const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("accessToken");
     setIsCheck(null);

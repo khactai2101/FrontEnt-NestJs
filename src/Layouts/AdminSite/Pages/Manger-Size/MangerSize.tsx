@@ -1,7 +1,4 @@
-import React, { useState } from "react";
 import Header from "../../Components/Layouts/Header";
-import Pagination from "../../Components/pagination/Pagination";
-import TableOrigin from "../../Components/Table/TableSize";
 import TableSize from "../../Components/Table/TableSize";
 
 const MangerSize = () => {

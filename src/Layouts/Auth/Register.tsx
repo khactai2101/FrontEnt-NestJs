@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Footer from "../CustomerSite/Components/Layout/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { getAllUsers } from "../../API/user";
-import { IUser } from "../../Types/type";
 import { notification } from "antd";
 
 interface FormData {
@@ -15,7 +13,6 @@ interface FormData {
 
 const Register: React.FC = () => {
   const navigate = useNavigate();
-  const [users, setUsers] = useState<IUser[]>([]);
   const initialFormData: FormData = {
     fullName: "",
     email: "",

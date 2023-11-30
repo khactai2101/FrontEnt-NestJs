@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Sidebar from "../../Components/Layouts/Sidebar";
 import { Outlet } from "react-router-dom";
 import * as io from "socket.io-client";
 import { getAllOrderByAdmin } from "../../../../API/order";
-import { message } from "antd";
 
 const socket = io.connect("http://localhost:9000");
 

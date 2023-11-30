@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../../Components/Layouts/Header";
-import Pagination from "../../Components/pagination/Pagination";
 import TableBrands from "../../Components/Table/TableBrand";
 
 const ManagerBrands = () => {

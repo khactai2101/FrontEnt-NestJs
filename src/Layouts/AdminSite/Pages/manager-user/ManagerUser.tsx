@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../../Components/Layouts/Header";
 import TableUser from "../../Components/Table/TableUser";
-import Pagination from "../../Components/pagination/Pagination";
 
 const ManagerUser = () => {
   const [valueSearch, setValueSearch] = useState<any>([]);

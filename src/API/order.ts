@@ -1,6 +1,5 @@
 import axios from "axios";
 
-const token = localStorage.getItem("accessToken");
 
 export const getAllOrderByAdmin = (dataToken: any) => {
   return axios

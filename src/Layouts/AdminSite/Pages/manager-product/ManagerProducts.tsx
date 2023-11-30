@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../../Components/Layouts/Header";
 import TableProduct from "../../Components/Table/TableProduct";
-import { Pagination } from "antd";
 
 export const ManagerProducts = () => {
   const [valueSearch, setValueSearch] = useState<any>([]);

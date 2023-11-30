@@ -2,7 +2,7 @@ import axios from "axios";
 
 const token = localStorage.getItem("accessToken");
 
-export const getAllSize = (data: any, dataToken: any) => {
+export const getAllSize = (dataToken: any) => {
   return axios
     .get("http://localhost:9000/api/v1/sizes", {
       headers: {

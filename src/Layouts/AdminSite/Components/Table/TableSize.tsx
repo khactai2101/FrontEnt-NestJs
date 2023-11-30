@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Button, Label, Modal, TextInput } from "flowbite-react";
+import { Button, Modal } from "flowbite-react";
 import {
   createSize,
   deleteSize,
