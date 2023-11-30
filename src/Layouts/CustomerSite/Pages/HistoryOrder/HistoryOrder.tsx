@@ -1,9 +1,8 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   getAllHistoryByUser,
   updateHistoryOrder,
 } from "../../../../API/historyOrder";
-import { Divider } from "antd";
 
 const HistoryOrder = () => {
   const [historyOrder, setHistoryOrder] = useState<any>();

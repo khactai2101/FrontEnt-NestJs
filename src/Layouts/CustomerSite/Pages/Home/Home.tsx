@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import Carousel from "../../Components/Carousel/Carousel";
-import DefaultCarousel from "../../Components/Carousel/Carousel";
 import Card from "../../Components/Card/Card";
+import DefaultCarousel from "../../Components/Carousel/Carousel";
 import Blog from "../Blog/Blog";
 
 const Home = () => {

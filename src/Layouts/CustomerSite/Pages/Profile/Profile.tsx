@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { getOneUser, updateProfile } from "../../../../API/user";
+import { useEffect, useState } from "react";
+import { getOneUser } from "../../../../API/user";
 import { createAddress } from "../../../../API/address";
 import { message } from "antd";
 
@@ -26,9 +26,6 @@ const Profile = () => {
     };
     data();
   }, []);
-  console.log(fileImage);
-
-  const handleInputChange = (data: any) => {};
 
   const handleAddAddress = async () => {
     const data = { address, phoneNumber };

@@ -1,5 +1,3 @@
-import React from "react";
-import logo404 from "../../assets/images/notfound.png";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {

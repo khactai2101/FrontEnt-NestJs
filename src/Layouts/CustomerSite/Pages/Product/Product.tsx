@@ -1,20 +1,11 @@
 import { Carousel } from "flowbite-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IProduct } from "../../../../Types/type";
-import { getAllProducts, getOneProduct } from "../../../../API";
-import {
-  getAllProductSize,
-  getOneUser,
-  addToCart,
-  getAllCartByUser,
-  updateCart,
-} from "../../../../API/user";
-import { BsCartPlus } from "react-icons/Bs";
+import { getOneProduct } from "../../../../API";
+import { addToCart, getAllCartByUser, updateCart } from "../../../../API/user";
 import * as io from "socket.io-client";
 const socket = io.connect("http://localhost:9000");
 
-import axios from "axios";
 import { message } from "antd";
 
 const Product = () => {
@@ -50,8 +41,6 @@ const Product = () => {
     };
     handleGetOne();
   }, []);
-
-  const [user, setUser] = useState<any>(null);
 
   const handlNewPrice = async (item: any) => {
     setPercent(item.percent);

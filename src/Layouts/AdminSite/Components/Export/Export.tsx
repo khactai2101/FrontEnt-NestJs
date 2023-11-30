@@ -1,4 +1,3 @@
-import React from "react";
 import * as XLSX from "xlsx";
 type Props = {
   data: [];
