@@ -3,12 +3,12 @@ import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./Layouts/CustomerSite/Utils/ScrollToTop.tsx";
-import { Notifications } from "react-push-notification";
+// import { Notifications } from "react-push-notification";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <ScrollToTop />
-    <Notifications />
+    {/* <Notifications /> */}
     <PayPalScriptProvider
       options={{
         clientId:
