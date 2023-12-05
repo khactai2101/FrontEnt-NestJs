@@ -3,7 +3,7 @@ import logo from "../../../../assets/images/logo-kyo.png";
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { getAllCartByUser, getOneUser } from "../../../../API/user";
-import { BsCartPlus } from "react-icons/Bs";
+// import * as BsCartPlus from "react-icons";
 import { NavLink } from "react-router-dom";
 import { Avatar, Dropdown } from "flowbite-react";
 import { getAllProducts } from "../../../../API";
@@ -226,7 +226,7 @@ function Header() {
                       >
                         <NavLink to="/cart">
                           <div className="relative z-0">
-                            <BsCartPlus size="30px" />
+                            <a> sadasd </a>
                             {cart?.length > 0 && (
                               <span className="absolute top-[-8px] right-[-5px] z-10 text-red-400 bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
                                 {cart.length}
