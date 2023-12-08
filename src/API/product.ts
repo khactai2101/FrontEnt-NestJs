@@ -4,7 +4,7 @@ const token = localStorage.getItem("accessToken");
 
 export const createProductSize = (data: any) => {
   return axios
-    .post(`http://localhost:9000/api/v1/products/productSize`, data, {
+    .post(`https://nestjs-c3hh.onrender.com/api/v1/products/productSize`, data, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -17,7 +17,7 @@ export const createProductSize = (data: any) => {
 };
 export const createProduct = (data: any) => {
   return axios
-    .post(`http://localhost:9000/api/v1/products`, data, {
+    .post(`https://nestjs-c3hh.onrender.com/api/v1/products`, data, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -30,7 +30,7 @@ export const createProduct = (data: any) => {
 };
 export const getAllProducts = (data: any) => {
   return axios
-    .get("http://localhost:9000/api/v1/products", {
+    .get("https://nestjs-c3hh.onrender.com/api/v1/products", {
       params: data,
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -46,7 +46,7 @@ export const getAllProducts = (data: any) => {
 export const BlockProducts = (data: any) => {
   return axios
     .put(
-      `http://localhost:9000/api/v1/products/block/${data.id}`,
+      `https://nestjs-c3hh.onrender.com/api/v1/products/block/${data.id}`,
       { status: data.status },
       {
         headers: { Authorization: `Bearer ${data.token}` },
@@ -63,7 +63,7 @@ export const BlockProducts = (data: any) => {
 
 export const getOneProduct = (id: number) => {
   return axios
-    .get(`http://localhost:9000/api/v1/products/${id}`, {
+    .get(`https://nestjs-c3hh.onrender.com/api/v1/products/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -77,7 +77,7 @@ export const getOneProduct = (id: number) => {
 
 export const updateProduct = (id: number, data: any) => {
   return axios
-    .put(`http://localhost:9000/api/v1/products/${id}`, data, {
+    .put(`https://nestjs-c3hh.onrender.com/api/v1/products/${id}`, data, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -92,7 +92,7 @@ export const updateProduct = (id: number, data: any) => {
 export const deleteProductSize = (productsId: number, sizesId: any) => {
   return axios
     .delete(
-      `http://localhost:9000/api/v1/products/productSize/${productsId}/${sizesId}`,
+      `https://nestjs-c3hh.onrender.com/api/v1/products/productSize/${productsId}/${sizesId}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }

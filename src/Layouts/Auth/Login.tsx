@@ -4,7 +4,7 @@ import { login } from "../../API/user";
 import { message } from "antd";
 import ButtonGoogle from "./button-google";
 import * as io from "socket.io-client";
-const socket = io.connect("http://localhost:9000");
+const socket = io.connect("https://nestjs-c3hh.onrender.com");
 
 const Login = () => {
   const [email, setEmail] = useState("");

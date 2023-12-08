@@ -4,7 +4,7 @@ const token = localStorage.getItem("accessToken");
 
 export const getAllHistoryByUser = (token: any) => {
   return axios
-    .get("http://localhost:9000/api/v1/order/me", {
+    .get("https://nestjs-c3hh.onrender.com/api/v1/order/me", {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response: any) => {
@@ -19,7 +19,7 @@ export const getAllHistoryByUser = (token: any) => {
 export const updateHistoryOrder = (id: number, status: any) => {
   return axios
     .put(
-      `http://localhost:9000/api/v1/order/${id}`,
+      `https://nestjs-c3hh.onrender.com/api/v1/order/${id}`,
       { status },
       {
         headers: { Authorization: `Bearer ${token}` },

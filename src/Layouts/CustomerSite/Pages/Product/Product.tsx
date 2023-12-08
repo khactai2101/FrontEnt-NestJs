@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getOneProduct } from "../../../../API";
 import { addToCart, getAllCartByUser, updateCart } from "../../../../API/user";
 import * as io from "socket.io-client";
-const socket = io.connect("http://localhost:9000");
+const socket = io.connect("https://nestjs-c3hh.onrender.com");
 
 import { message } from "antd";
 

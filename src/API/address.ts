@@ -4,7 +4,7 @@ const token = localStorage.getItem("accessToken");
 
 export const getAllAddress = (token: any) => {
   return axios
-    .get("http://localhost:9000/api/v1/addresses/me", {
+    .get("https://nestjs-c3hh.onrender.com/api/v1/addresses/me", {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -19,7 +19,7 @@ export const getAllAddress = (token: any) => {
 export const createAddress = (data: any) => {
   return axios
     .post(
-      `http://localhost:9000/api/v1/addresses`,
+      `https://nestjs-c3hh.onrender.com/api/v1/addresses`,
       { address: data.address, phoneNumber: data.phoneNumber },
       {
         headers: { Authorization: `Bearer ${token}` },

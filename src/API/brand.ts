@@ -4,7 +4,7 @@ const token = localStorage.getItem("accessToken");
 
 export const getAllBrands = (data: any, dataToken: any) => {
   return axios
-    .get("http://localhost:9000/api/v1/brands", {
+    .get("https://nestjs-c3hh.onrender.com/api/v1/brands", {
       params: data,
       headers: {
         Authorization: `Bearer ${dataToken}`,
@@ -21,7 +21,7 @@ export const getAllBrands = (data: any, dataToken: any) => {
 export const createBrands = (data: any) => {
   return axios
     .post(
-      `http://localhost:9000/api/v1/brands`,
+      `https://nestjs-c3hh.onrender.com/api/v1/brands`,
       { name: data },
       {
         headers: { Authorization: `Bearer ${token}` },
@@ -39,7 +39,7 @@ export const createBrands = (data: any) => {
 export const updateBrands = (id: number, data: any) => {
   return axios
     .put(
-      `http://localhost:9000/api/v1/brands/${id}`,
+      `https://nestjs-c3hh.onrender.com/api/v1/brands/${id}`,
       { name: data },
       {
         headers: { Authorization: `Bearer ${token}` },
@@ -56,7 +56,7 @@ export const updateBrands = (id: number, data: any) => {
 
 export const deleteBrand = (id: any) => {
   return axios
-    .delete(`http://localhost:9000/api/v1/brands/${id}`, {
+    .delete(`https://nestjs-c3hh.onrender.com/api/v1/brands/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -70,7 +70,7 @@ export const deleteBrand = (id: any) => {
 
 // export const getOneBrand = (id: number) => {
 //   return axios
-//     .get(`http://localhost:9000/api/v1/brands/${id}`)
+//     .get(`https://nestjs-c3hh.onrender.com/api/v1/brands/${id}`)
 //     .then((response) => {
 //       return response.data;
 //     })

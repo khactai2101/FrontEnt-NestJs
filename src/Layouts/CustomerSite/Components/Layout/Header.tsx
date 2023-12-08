@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { Avatar, Dropdown } from "flowbite-react";
 import { getAllProducts } from "../../../../API";
 import * as io from "socket.io-client";
-const socket = io.connect("http://localhost:9000");
+const socket = io.connect("https://nestjs-c3hh.onrender.com");
 
 function Header() {
   const navigate = useNavigate();

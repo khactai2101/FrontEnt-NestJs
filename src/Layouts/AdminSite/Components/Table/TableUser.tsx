@@ -3,7 +3,7 @@ import { changeStatusUser, getAllUsers } from "../../../../API/user";
 import { message } from "antd";
 import ExportButton from "../Export/Export";
 import * as io from "socket.io-client";
-const socket = io.connect("http://localhost:9000");
+const socket = io.connect("https://nestjs-c3hh.onrender.com");
 const TableUser = (props: any) => {
   const [openModal, setOpenModal] = useState<string | undefined>();
   const propsModal = { openModal, setOpenModal };

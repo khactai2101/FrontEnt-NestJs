@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getAllOrderByAdmin = (dataToken: any) => {
   return axios
-    .get("http://localhost:9000/api/v1/order", {
+    .get("https://nestjs-c3hh.onrender.com/api/v1/order", {
       headers: { Authorization: `Bearer ${dataToken}` },
     })
     .then((response: any) => {

@@ -67,7 +67,7 @@ const Register: React.FC = () => {
     try {
       // Gửi yêu cầu đăng ký lên API
       const response = await axios.post(
-        "http://localhost:9000/api/v1/auth/register",
+        "https://nestjs-c3hh.onrender.com/api/v1/auth/register",
         {
           fullName: formData.fullName,
           email: formData.email,

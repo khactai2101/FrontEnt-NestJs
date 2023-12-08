@@ -4,7 +4,7 @@ const token = localStorage.getItem("accessToken");
 
 export const getAllUsers = (data: any, dataToken: any) => {
   return axios
-    .get("http://localhost:9000/api/v1/user", {
+    .get("https://nestjs-c3hh.onrender.com/api/v1/user", {
       params: data,
       headers: { Authorization: `Bearer ${dataToken}` },
     })
@@ -18,7 +18,7 @@ export const getAllUsers = (data: any, dataToken: any) => {
 };
 export const getOneUser = (token: any) => {
   return axios
-    .get(`http://localhost:9000/api/v1/user/me`, {
+    .get(`https://nestjs-c3hh.onrender.com/api/v1/user/me`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -33,7 +33,7 @@ export const getOneUser = (token: any) => {
 export const changeStatusUser = (req: any) => {
   return axios
     .put(
-      `http://localhost:9000/api/v1/user/updateStatus/${req.id}`,
+      `https://nestjs-c3hh.onrender.com/api/v1/user/updateStatus/${req.id}`,
       { status: req.status },
       {
         headers: { Authorization: `Bearer ${req.token}` },
@@ -50,7 +50,7 @@ export const changeStatusUser = (req: any) => {
 export const updateProfile = (id: number, data: any) => {
   return axios
     .put(
-      `http://localhost:9000/api/v1/sizes/${id}`,
+      `https://nestjs-c3hh.onrender.com/api/v1/sizes/${id}`,
       { fullName: data.fullName },
       {
         headers: { Authorization: `Bearer ${token}` },
@@ -67,7 +67,7 @@ export const updateProfile = (id: number, data: any) => {
 
 export const addToCart = (data: any, Datatoken: any) => {
   return axios
-    .post(`http://localhost:9000/api/v1/carts`, data, {
+    .post(`https://nestjs-c3hh.onrender.com/api/v1/carts`, data, {
       headers: { Authorization: `Bearer ${Datatoken.dataToken}` },
     })
     .then((response) => {
@@ -81,7 +81,7 @@ export const addToCart = (data: any, Datatoken: any) => {
 
 export const updateCart = (id: number, data: any) => {
   return axios
-    .put(`http://localhost:9000/api/v1/carts/${id}`, data, {
+    .put(`https://nestjs-c3hh.onrender.com/api/v1/carts/${id}`, data, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -94,7 +94,7 @@ export const updateCart = (id: number, data: any) => {
 };
 export const deleteCartItemByUser = (id: any) => {
   return axios
-    .delete(`http://localhost:9000/api/v1/carts/${id}`, {
+    .delete(`https://nestjs-c3hh.onrender.com/api/v1/carts/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -107,7 +107,7 @@ export const deleteCartItemByUser = (id: any) => {
 };
 export const createOrder = (data: any, Datatoken: any) => {
   return axios
-    .post(`http://localhost:9000/api/v1/order`, data, {
+    .post(`https://nestjs-c3hh.onrender.com/api/v1/order`, data, {
       headers: { Authorization: `Bearer ${Datatoken}` },
     })
     .then((response) => {
@@ -121,7 +121,7 @@ export const createOrder = (data: any, Datatoken: any) => {
 
 export const getAllProductSize = async () => {
   return await axios
-    .get("http://localhost:9000/api/v1/productSizes")
+    .get("https://nestjs-c3hh.onrender.com/api/v1/productSizes")
     .then((response: any) => {
       return response.data;
     })
@@ -133,7 +133,7 @@ export const getAllProductSize = async () => {
 
 export const getAllCartByUser = (dataToken: any) => {
   return axios
-    .get("http://localhost:9000/api/v1/carts/me", {
+    .get("https://nestjs-c3hh.onrender.com/api/v1/carts/me", {
       headers: { Authorization: `Bearer ${dataToken}` },
     })
     .then((response) => {
@@ -147,7 +147,7 @@ export const getAllCartByUser = (dataToken: any) => {
 
 export const login = async (data: any) => {
   return await axios
-    .post(`http://localhost:9000/api/v1/auth/login`, data)
+    .post(`https://nestjs-c3hh.onrender.com/api/v1/auth/login`, data)
     .then((response) => {
       return response;
     })

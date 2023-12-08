@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import * as io from "socket.io-client";
 import { getAllOrderByAdmin } from "../../../../API/order";
 
-const socket = io.connect("http://localhost:9000");
+const socket = io.connect("https://nestjs-c3hh.onrender.com");
 
 const AdminLayout = () => {
   const token = localStorage.getItem("accessToken");

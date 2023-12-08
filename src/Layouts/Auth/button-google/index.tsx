@@ -6,7 +6,7 @@ const ButtonGoogle = () => {
     const top = window.screen.height / 4;
 
     window.open(
-      "http://localhost:9000/api/v1/auth/google",
+      "https://nestjs-c3hh.onrender.com/api/v1/auth/google",
       "mywindow",
       `width=${width},height=${height},top=${top},left=${left},location=no,menubar=no,scrollbars=yes,status=no,titlebar=no`
     );

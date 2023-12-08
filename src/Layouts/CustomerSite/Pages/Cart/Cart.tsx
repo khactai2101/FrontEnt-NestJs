@@ -9,7 +9,7 @@ import { message } from "antd";
 import { getAllAddress } from "../../../../API/address";
 
 import * as io from "socket.io-client";
-const socket = io.connect("http://localhost:9000");
+const socket = io.connect("https://nestjs-c3hh.onrender.com");
 import PaypalButton from "../../../AdminSite/Components/PaypalButton";
 
 const Cart = () => {
