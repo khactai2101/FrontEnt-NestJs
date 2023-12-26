@@ -238,7 +238,7 @@ function Header(props: any) {
                       >
                         <NavLink to="/cart">
                           <div className="relative z-0">
-                            <BsCartPlus size="30px" />
+                            <a href="">ádas</a>
                             {cart?.length > 0 && (
                               <span className="absolute top-[-8px] right-[-5px] z-10 text-red-400 bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
                                 {cart.length}
