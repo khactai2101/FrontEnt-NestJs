@@ -1,21 +1,30 @@
-import { useEffect, useState } from "react";
-import logo from "../../../../assets/images/logo-kyo.png";
+import React, { useEffect, useState } from "react";
+import logo from "../../../../assets/images/REMO-Tach nen.png";
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
-import { getAllCartByUser, getOneUser } from "../../../../API/user";
-// import * as BsCartPlus from "react-icons";
+import { IUser } from "../../../../Types/type";
+import {
+  getAllCartByUser,
+  getAllUsers,
+  getOneUser,
+} from "../../../../API/user";
+import { BsCartPlus } from "react-icons/Bs";
 import { NavLink } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 import { Avatar, Dropdown } from "flowbite-react";
 import { getAllProducts } from "../../../../API";
 import * as io from "socket.io-client";
-const socket = io.connect("https://nestjs-c3hh.onrender.com");
+const socket = io.connect("http://localhost:9000");
 
-function Header() {
+function Header(props: any) {
   const navigate = useNavigate();
   const token = localStorage.getItem("accessToken");
+  const [value, setValue] = useState<string>("");
   const [users, setUsers] = useState<any>([]);
   const [isCheck, setIsCheck] = useState(token);
   const [products, setProducts] = useState<any>([]);
+  const [loading, setLoading] = useState<any>(false);
+  const [valueSearch, setValueSearch] = useState<any>([]);
   const [cart, setCart] = useState<any>();
 
   // useEffect(() => {
@@ -113,8 +122,8 @@ function Header() {
         <div className="header-moving">
           <div className="header-wrapper-top">
             <div className="header-top">
-              <div className="header-top__left">
-                <p>KYO Authentic- Shop Mỹ Phẩm, Son Môi, Nước Hoa Chính Hãng</p>
+              <div className="header-top__left ml-6">
+                <p>REMO - Dịch Vụ Cung Cấp Hộp Quà Bí Ẩn Cho Trẻ Em</p>
               </div>
               <div className="header-top__right">
                 <ul className="header-contact">
@@ -137,9 +146,9 @@ function Header() {
           {/* main */}
           <div className="header-wapper-main">
             <div className="container">
-              <div className="header-main__left">
+              <div className="header-main__left   ">
                 <Link to="/">
-                  <img src={logo} alt="" />
+                  <img src={logo} alt="" className="w-[100px] ml-[150px]" />
                 </Link>
               </div>
               <div className="header-main__mid">
@@ -150,7 +159,10 @@ function Header() {
                     placeholder="Nhập từ khóa tìm kiếm"
                     onChange={handleInputClick}
                   />
-                  <i className="fa-solid fa-magnifying-glass fa-xl"></i>
+                  <i
+                    className="fa-solid fa-magnifying-glass fa-xl"
+                    style={{ color: "#fff" }}
+                  />
                   <div
                     className={` ${
                       isHidden === false
@@ -226,7 +238,7 @@ function Header() {
                       >
                         <NavLink to="/cart">
                           <div className="relative z-0">
-                            <a> sadasd </a>
+                            <BsCartPlus size="30px" />
                             {cart?.length > 0 && (
                               <span className="absolute top-[-8px] right-[-5px] z-10 text-red-400 bg-red-500 rounded-full w-5 h-5 flex items-center justify-center">
                                 {cart.length}
@@ -280,22 +292,22 @@ function Header() {
                     </NavLink>
                   </li>
                   <li>
-                    <a href="#lipstick">SON MÔI</a>
+                    <a href="#lipstick">QUÀ TẶNG GIÁNG SINH</a>
                   </li>
                   <li>
-                    <a href="#perfume">NƯỚC HOA</a>
+                    <a href="#perfume">MISTERY BOX 3-5T</a>
                   </li>
                   <li>
-                    <a href="#sunscreen">CHỐNG NẮNG</a>
+                    <a href="#sunscreen">MISTERY BOX 5-7T</a>
                   </li>
                   <li>
-                    <a href="#facemakeup">TRANG ĐIỂM MẶT</a>
+                    <a href="#facemakeup">MISTERY BOX 7-10T</a>
                   </li>
                   <li>
-                    <a href="#eyemakeup">TRANG ĐIỂM MẮT</a>
+                    <a href="#eyemakeup">ƯU ĐÃI 12 THÁNG</a>
                   </li>
                   <li>
-                    <a href="#skincare">CHĂM SÓC DA</a>
+                    <a href="#skincare">CÙNG MỞ HỘP NHÉ</a>
                   </li>
                 </ul>
               </div>
@@ -308,3 +320,6 @@ function Header() {
 }
 
 export default Header;
+function useSelector(arg0: (state: any) => any) {
+  throw new Error("Function not implemented.");
+}

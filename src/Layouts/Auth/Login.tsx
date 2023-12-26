@@ -4,7 +4,7 @@ import { login } from "../../API/user";
 import { message } from "antd";
 import ButtonGoogle from "./button-google";
 import * as io from "socket.io-client";
-const socket = io.connect("https://nestjs-c3hh.onrender.com");
+const socket = io.connect("http://localhost:9000");
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -83,7 +83,7 @@ const Login = () => {
           <div className="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
             <div className="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
               <img
-                src="https://res.cloudinary.com/macxenon/image/upload/v1631570592/Run_-_Health_qcghbu.png"
+                src="https://res.cloudinary.com/dllxhogzr/image/upload/v1702286393/Project-NestJs/tdhatl0e3uqqpcnvkd2p.png"
                 alt="Đăng nhập"
               />
             </div>

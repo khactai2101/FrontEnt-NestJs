@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../CustomerSite/Components/Layout/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { getAllUsers } from "../../API/user";
+import { IUser } from "../../Types/type";
 import { notification } from "antd";
 
 interface FormData {
@@ -13,6 +15,7 @@ interface FormData {
 
 const Register: React.FC = () => {
   const navigate = useNavigate();
+  const [users, setUsers] = useState<IUser[]>([]);
   const initialFormData: FormData = {
     fullName: "",
     email: "",
@@ -67,7 +70,7 @@ const Register: React.FC = () => {
     try {
       // Gửi yêu cầu đăng ký lên API
       const response = await axios.post(
-        "https://nestjs-c3hh.onrender.com/api/v1/auth/register",
+        "http://localhost:9000/api/v1/auth/register",
         {
           fullName: formData.fullName,
           email: formData.email,
@@ -105,7 +108,7 @@ const Register: React.FC = () => {
             <div className="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
               <div className="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
                 <img
-                  src="https://res.cloudinary.com/macxenon/image/upload/v1631570592/Run_-_Health_qcghbu.png"
+                  src="https://res.cloudinary.com/dllxhogzr/image/upload/v1702286393/Project-NestJs/tdhatl0e3uqqpcnvkd2p.png"
                   alt="Logo"
                 />
               </div>

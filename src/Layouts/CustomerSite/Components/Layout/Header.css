@@ -6,7 +6,7 @@
 }
 .header-wrapper-top {
   width: 100%;
-  background-color: #fd95ab;
+  background-color: #e5db8f;
 }
 .form-search-small {
   border: 1px solid rgb(220, 220, 220);
@@ -63,7 +63,7 @@
   margin-right: 5px;
 }
 .header-wapper-main {
-  background-color: #fdf3f5;
+  background-color: #d7f2fa;
 }
 
 .header-wapper-main .container {
@@ -97,7 +97,7 @@
   border-radius: 20px;
   border: none;
   height: 40px;
-  background-color: #f2bec9;
+  background-color: #9bd8ea ;
 
   color: rgb(255, 255, 255);
   padding: 0 10px;
@@ -139,7 +139,7 @@
 }
 .login,
 .register {
-  background-color: #fd95ab;
+  background-color: #9bd8ea;
   border: none;
   border-radius: 5px;
   width: 100px;
@@ -156,7 +156,7 @@
 }
 .login:hover,
 .register:hover {
-  background-color: #d95773;
+  background-color: #9bd8ea;
 }
 .logout {
   padding-top: 15px;
@@ -165,7 +165,7 @@
   display: none;
 }
 .logout i {
-  color: #fd95aa;
+  color: #9bd8ea;
 }
 .header-wapper-bottom {
   height: 45px;
